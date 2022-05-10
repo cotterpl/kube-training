@@ -1,0 +1,8 @@
+imageName: grzegorzskorupa/myapp
+useReplicas: true
+
+config:
+  secretKeyRef: myapp-secrets
+  varFromPodDefinition: "default value"
+  readinessPeriodSeconds: 20
+

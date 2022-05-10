@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp-deployment
+spec:
+  selector:
+    matchLabels:
+      app: myapp-pod
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp-pod
+    spec:
+      containers:
+        - name: myapp-pod
+          image: "grzegorzskorupa/myapp:1.0.0"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

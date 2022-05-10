@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myapp-config-map
+data:
+  # property-like keys; each key maps to a simple value
+  var_from_config_map: "yaabadoo"
+  some_other_var: "exemplary"
+---
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: myapp-secrets
+data:
+  var_from_secret: ZG9fbm90X3RlbGw=
+  some_other_secret: eW91IGhhY2tlZCBtZQ==

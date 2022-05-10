@@ -1,0 +1,23 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+# One control plane node and one "worker".
+#
+# While these will not add more real compute capacity and
+# have limited isolation, this can be useful for testing
+# parallel tasks etc.
+#
+# The API-server and other control plane components will be
+# on the control-plane node.
+#
+# You probably don't need this unless you are testing Kubernetes itself.
+nodes:
+  - role: control-plane
+    image: kindest/node:v1.20.7@sha256:cbeaf907fc78ac97ce7b625e4bf0de16e3ea725daf6b04f930bd14c67c671ff9
+  - role: worker
+    image: kindest/node:v1.20.7@sha256:cbeaf907fc78ac97ce7b625e4bf0de16e3ea725daf6b04f930bd14c67c671ff9
+  - role: worker
+    image: kindest/node:v1.20.7@sha256:cbeaf907fc78ac97ce7b625e4bf0de16e3ea725daf6b04f930bd14c67c671ff9
+networking:
+  # By default the API server listens on a random open port.
+  apiServerAddress: "0.0.0.0"
+  apiServerPort: 6443
