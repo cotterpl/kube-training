@@ -1,5 +1,7 @@
 import logging
 import os
+from math import sqrt
+
 from fastapi import FastAPI
 
 logging.basicConfig(level=logging.INFO)
@@ -36,3 +38,10 @@ async def get_config():
         'VAR_FROM_CONFIG_MAP': var_from_config_map,
         'VAR_FROM_SECRET': var_from_secret,
     }
+
+@app.get("/hpatest")
+async def hpa_test():
+    x = 0.001
+    for i in range(0, 50000):
+        x += sqrt(x)
+    return {'computed': x}

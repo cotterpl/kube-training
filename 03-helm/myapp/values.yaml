@@ -1,5 +1,5 @@
 imageName: grzegorzskorupa/myapp
-useReplicas: true
+useHpa: false
 
 config:
   secretKeyRef: myapp-secrets

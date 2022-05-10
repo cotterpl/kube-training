@@ -5,7 +5,7 @@ metadata:
   labels:
     app: myapp-deployment
 spec:
-  {{- if .Values.useReplicas}}
+  {{- if not .Values.useHpa}}
   replicas: 2
   {{- end }}
   selector:

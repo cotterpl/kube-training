@@ -6,6 +6,29 @@
 - kubectl https://kubernetes.io/docs/tasks/tools/
 - kind https://kind.sigs.k8s.io/docs/user/quick-start/#installation
 
+## Kubernetes Introduction
+
+See: https://kubernetes.io/docs/concepts/overview/components/
+
+Why kubernetes:
+
+- Standardized declarative deployment of software
+- Everything runs in a container that you fully control
+- High availability and scaling out of the box
+- No need for dedicated/virtual machines - big savings
+- Rich flexibility, less DevOps work
+- Forget about logs rotations.
+- Ad-hoc jobs https://kubernetes.io/docs/concepts/workloads/controllers/job/
+- Authentication and authorization mechanisms both for humans and your
+  applications
+  https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+- Many environments in one
+  cluster: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+
+Against kubernetes:
+
+- It is complex. High learning curve.
+
 ## Kind - Create Cluster
 
 ```shell
@@ -54,6 +77,13 @@ See what is in `/var/run/secrets/kubernetes.io`.
 
 ## Namespaces
 
+Namespace offers for logical separation of environments.
+
+Many 'things' must have unique names but those names can be the same if they are
+in separate namespaces.
+
+To create a namespace called `example` run:
+
 ```shell
 kubectl create namespace example
 ```
@@ -65,21 +95,39 @@ kubectl get pod -n example
 kubectl get pod --namespace example
 ```
 
-See https://github.com/blendle/kns.
+Tip: https://github.com/blendle/kns.
+
+Namespaces are useful for:
+
+- separation of environments, you can have: dev/staging/ad-hoc environment in
+  one cluster
+- separation of infrastructure related software (for example keeping things like
+  metric server, ArgoCD in separate namespace)
 
 ### Exercise
 
-1. Create ubuntu pod in the namespace
+1. Create ubuntu pod in the `example` namespace
 
-## Tooling
+## Useful Tooling
 
 Install https://k9scli.io/
+
+## Note on kubectl
+
+```shell
+kubectl get <resource type> [<resource name>]
+kubectl get <resource type> <resource name> -o yaml
+kubectl describe <resource type> <resource name>
+kubectl edit <resource type> <resource name>
+kubectl delete <resource type> <resource name>
+```
 
 ### Exercises
 
 1. Figure out how to remove pod.
-2. Download yaml definition of created namespace and pod (hint: `-o yaml`). Do you see any fields added by Kubernetes?
-3. Check what pods are running in each node.
+2. Download yaml definition of created namespace and pod (hint: `-o yaml`). Do
+   you see any fields added by Kubernetes?
+3. Check which pods are running in each node.
 4. Try finding logs for Kubernetes control plane components.
 5. See what is in `~/.kube`. What is `kubectl --context` for? How to switch it?
 
