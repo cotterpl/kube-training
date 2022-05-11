@@ -20,8 +20,8 @@ There are various service types:
 
 - NodePort - good for local development
 - NodeBalancer - when you are using common cloud providers
-- Ingress - dedicated entrypoint with routing rules between external clients and
-  Services
+- Ingress - dedicated proxy with routing rules between external clients and
+  internal Services
 
 More on service types:
 
@@ -29,7 +29,7 @@ More on service types:
 - https://kubernetes.io/docs/concepts/services-networking/service/
 
 Even though we have a NodePort service it is still not accessible from outside.
-We need to forward port outside:
+We need to forward the service port outside:
 
 ```shell
 kubectl port-forward svc/myapp-service 8080:80
