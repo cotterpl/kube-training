@@ -3,7 +3,6 @@ kind: ConfigMap
 metadata:
   name: myapp-config-map
 data:
-  # property-like keys; each key maps to a simple value
   var_from_config_map: "yaabadoo"
   some_other_var: "exemplary"
 ---

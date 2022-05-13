@@ -19,10 +19,10 @@ Setup and configure Kubernetes cluster so that `myapp` endpoints:
 There is no need to modify application code or it's docker image. However you
 need to install Redis wihin cluster and configure myapp to connect to it.
 
-Tips:
+Hints:
 
-- Is there a helm chart for redis?
 - What configuration does `myapp` need?
-- What is redis host address?
-- How to get or set redis password?
-- Should we check redis connection in readiness probe?
+- Is there a helm chart for Redis?
+- What is Redis host address?
+- How to get or set Redis password?
+- Should we check Redis connection in readiness probe?

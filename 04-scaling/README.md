@@ -20,6 +20,8 @@ helm install \
   metrics-server metrics-server/metrics-server
 ```
 
+Check if it has deployed as expected.
+
 ## Service
 
 We need a service with auto-scaling configured. Please notice custom values file
@@ -46,6 +48,28 @@ kubectl -n hpatest get hpa --watch
 ```shell
 kubectl run -n hpatest -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.03; do wget -q -O- http://myapp-service/hpatest; done"
 ```
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
 
 ## Appendix
 

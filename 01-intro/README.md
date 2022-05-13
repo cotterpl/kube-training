@@ -8,7 +8,7 @@
 
 ## Kubernetes Introduction
 
-See: https://kubernetes.io/docs/concepts/overview/components/
+See: https://www.javatpoint.com/kubernetes
 
 Why kubernetes:
 
@@ -27,7 +27,13 @@ Why kubernetes:
 
 Against kubernetes:
 
-- It is complex. High learning curve.
+- It is complex.
+- Steep learning curve.
+
+Before learning Kubernetes you should be familiar with:
+
+- Containers: Docker and Docker compose
+- Networking
 
 ## Kind - Create Cluster
 
@@ -59,15 +65,19 @@ Try going to: https://localhost:6443/
 
 ## Create your first pod
 
+To ask cluster to create pod:
+
 ```shell
 kubectl apply -f 01-intro/ubuntu_pod.yaml
 ```
+
+See if it has been created:
 
 ```shell
 kubectl get pods
 ```
 
-Enter pod shell
+Enter pod shell:
 
 ```shell
 kubectl exec -it ubuntu -- /bin/bash
@@ -104,6 +114,9 @@ Namespaces are useful for:
 - separation of infrastructure related software (for example keeping things like
   metric server, ArgoCD in separate namespace)
 
+Note: You can apply limit resources available to
+namespace https://kubernetes.io/docs/concepts/policy/resource-quotas/
+
 ### Exercise
 
 1. Create ubuntu pod in the `example` namespace
@@ -113,6 +126,12 @@ Namespaces are useful for:
 Install https://k9scli.io/
 
 ## Note on kubectl
+
+kubectl <action> <resource type> <resource name> ...
+
+Actions: get, describe, apply, create, edit, delete, ...
+
+Resource types: node, pod, namespace, service, ...
 
 ```shell
 kubectl get <resource type> [<resource name>]

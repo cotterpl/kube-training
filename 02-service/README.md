@@ -37,6 +37,8 @@ kubectl port-forward svc/myapp-service 8080:80
 
 Now try going to http://localhost:8080
 
+![Deployment and Service](img/service_selectors.drawio.png)
+
 ## Logs
 
 ```shell
@@ -72,6 +74,8 @@ Kubernetes can check if our application is ready to serve traffic.
 kubectl apply -f 02-service/deployment/02-deployment-probes.yaml
 ```
 
+Check if it has deployed as expected.
+
 **Liveness probe:** Application is working, kubernetes should NOT attempt to
 restart it.
 
@@ -80,7 +84,11 @@ restart it.
 Application may be alive but not ready for example when the database it relies
 on is not reachable.
 
-## Scaling and Resources
+## Replicas and Resources
+
+You can ask kubernetes to create many pod instances for you.
+
+You can and should define resources your service needs.
 
 ```shell
 kubectl apply -f 02-service/deployment/03-deployment-replicas-resources.yaml
@@ -92,11 +100,70 @@ Notice that Deployment also creates ReplicaSet:
 kubectl get replicaset
 ```
 
+### Exercise
+
+Try increasing replicas or resources. What happens when you ask for more than is
+available?
+
 ## Configuration:
+
+You may want to pass some configurations to your service
 
 ```shell
 kubectl apply -f 02-service/deployment/04-deployment-env-vars.yaml
 ```
+
+Now try going to http://localhost:8080/config
+
+## Kubernetes Philosophy
+
+Kubernetes does not simply do what you order it to.
+
+When you use kubectl to change what is within cluster (i.e. apply/create/delete)
+you are asking it to attempt to reach a state consistent with what you asked
+for.
+
+This is a subtle yet important difference between:
+
+'Can you please do this' vs 'Can you please attempt to reach the following
+state'
+
+Kubernetes will do all in its power to transform cluster to a consistent state
+but it does not guarantee this state can be reached.
+
+![Manifests vs cluster state](img/kubernetes_manifests.drawio.png)
+
+Kubernetes tries to be fault tolerant as much as possible and recover as soon as
+possible. For example, it will keep trying to pull container image even though
+one is not there. For example Service shall keep searching for pods that match
+selector even though none will ever match it.
+
+Kubernetes tries to impose as small constraints on order of operations as
+possible. But do not expect you can do anything in any order. For example, you
+can not create a pod that needs a configmap that is not present. Also don't
+expect your pods to automatically restart when you change a config map.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
 
 ## Appendix
 
