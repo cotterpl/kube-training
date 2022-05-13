@@ -1,4 +1,14 @@
-# Deplyments and Services
+# Deploy application to Kubernetes #
+
+## Introduction
+
+In `02-service/myapp/main.py` there is a simple application with API we would
+like to deploy within our Kubernettes cluster.
+
+This app has been already published as Docker image
+to https://hub.docker.com/r/grzegorzskorupa/myapp.
+
+## Deplyments and Services
 
 In order to provide our application as externally reachable we need at least 2
 components: a Deployment (can also be simple pod) and a Service.

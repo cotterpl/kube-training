@@ -127,7 +127,11 @@ Install https://k9scli.io/
 
 ## Note on kubectl
 
+The usual syntax is:
+
+```shell
 kubectl <action> <resource type> <resource name> ...
+```
 
 Actions: get, describe, apply, create, edit, delete, ...
 
