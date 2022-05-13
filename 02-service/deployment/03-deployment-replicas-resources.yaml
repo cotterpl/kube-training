@@ -34,7 +34,7 @@ spec:
             timeoutSeconds: 2
             periodSeconds: 20
             httpGet:
-              path: /isready
+              path: /ready
               port: 80
           # NEW SECTION - START
           resources:

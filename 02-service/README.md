@@ -84,7 +84,7 @@ Kubernetes can check if our application is ready to serve traffic.
 kubectl apply -f 02-service/deployment/02-deployment-probes.yaml
 ```
 
-Check if it has deployed as expected.
+Check if it has deployed as expected. **What is the issue?**
 
 **Liveness probe:** Application is working, kubernetes should NOT attempt to
 restart it.
@@ -93,6 +93,8 @@ restart it.
 
 Application may be alive but not ready for example when the database it relies
 on is not reachable.
+
+Try breaking liveness probe or readiness probe and observe what happens.
 
 ## Replicas and Resources
 
