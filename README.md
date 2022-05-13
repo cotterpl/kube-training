@@ -26,3 +26,5 @@ Hints:
 - What is Redis host address?
 - How to get or set Redis password?
 - Should we check Redis connection in readiness probe?
+
+See only if you feel lost: [Solution description](assignment_solution.md)

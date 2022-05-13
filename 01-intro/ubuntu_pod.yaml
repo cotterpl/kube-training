@@ -1,3 +1,4 @@
+# copied from: https://downey.io/notes/dev/ubuntu-sleep-pod-yaml/
 apiVersion: v1
 kind: Pod
 metadata:
@@ -6,10 +7,10 @@ metadata:
     app: ubuntu
 spec:
   containers:
-  - image: ubuntu
-    command:
-      - "sleep"
-      - "604800"
-    imagePullPolicy: IfNotPresent
-    name: ubuntu
+    - image: ubuntu
+      command:
+        - "sleep"
+        - "604800"
+      imagePullPolicy: IfNotPresent
+      name: ubuntu
   restartPolicy: Always
