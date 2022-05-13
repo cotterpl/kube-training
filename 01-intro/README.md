@@ -130,19 +130,19 @@ Install https://k9scli.io/
 The usual syntax is:
 
 ```shell
-kubectl <action> <resource type> <resource name> ...
+kubectl <action> <object type> <object name> ...
 ```
 
 Actions: get, describe, apply, create, edit, delete, ...
 
-Resource types: node, pod, namespace, service, ...
+Object types: node, pod, namespace, service, ...
 
 ```shell
-kubectl get <resource type> [<resource name>]
-kubectl get <resource type> <resource name> -o yaml
-kubectl describe <resource type> <resource name>
-kubectl edit <resource type> <resource name>
-kubectl delete <resource type> <resource name>
+kubectl get <object type> [<object name>]
+kubectl get <object type> <object name> -o yaml
+kubectl describe <object type> <object name>
+kubectl edit <object type> <object name>
+kubectl delete <object type> <object name>
 ```
 
 ### Exercises

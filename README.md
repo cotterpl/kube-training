@@ -5,9 +5,9 @@ Contains materials for Kubernetes basics training
 Training contents:
 
 - [Introduction](01-intro/README.md)
-- [Service](01-intro/README.md)
-- [Helm Charts](01-intro/README.md)
-- [Auto Scaling](01-intro/README.md)
+- [Service](02-service/README.md)
+- [Helm Charts](03-helm/README.md)
+- [Auto Scaling](04-scaling/README.md)
 
 # Assignment
 
