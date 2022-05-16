@@ -26,12 +26,12 @@ spec:
             timeoutSeconds: 4
             periodSeconds: 20
             httpGet:
-              path: /alive_ss
+              path: /alive
               port: 80
           readinessProbe:
             timeoutSeconds: 2
             periodSeconds: 20
             httpGet:
-              path: /ready_ss
+              path: /ready
               port: 80
           # NEW SECTION - END
