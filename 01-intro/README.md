@@ -105,8 +105,6 @@ kubectl get pod -n example
 kubectl get pod --namespace example
 ```
 
-Tip: https://github.com/blendle/kns.
-
 Namespaces are useful for:
 
 - separation of environments, you can have: dev/staging/ad-hoc environment in
@@ -123,7 +121,10 @@ namespace https://kubernetes.io/docs/concepts/policy/resource-quotas/
 
 ## Useful Tooling
 
-Install https://k9scli.io/
+See
+
+- https://github.com/blendle/kns
+- https://k9scli.io/
 
 ## Note on kubectl
 

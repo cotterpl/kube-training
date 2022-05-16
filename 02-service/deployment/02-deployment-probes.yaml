@@ -22,16 +22,16 @@ spec:
             - containerPort: 80
           # NEW SECTION - START
           livenessProbe:
-            failureThreshold: 3
+            failureThreshold: 2
             timeoutSeconds: 4
             periodSeconds: 20
             httpGet:
-              path: /alive
+              path: /alive_ss
               port: 80
           readinessProbe:
             timeoutSeconds: 2
             periodSeconds: 20
             httpGet:
-              path: /ready
+              path: /ready_ss
               port: 80
           # NEW SECTION - END

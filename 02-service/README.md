@@ -94,6 +94,8 @@ restart it.
 Application may be alive but not ready for example when the database it relies
 on is not reachable.
 
+### Exercise
+
 Try breaking liveness probe or readiness probe and observe what happens.
 
 ## Replicas and Resources

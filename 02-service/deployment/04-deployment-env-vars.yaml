@@ -37,7 +37,7 @@ spec:
                   key: var_from_secret
           # NEW SECTION - END
           livenessProbe:
-            failureThreshold: 3
+            failureThreshold: 2
             timeoutSeconds: 4
             periodSeconds: 20
             httpGet:
