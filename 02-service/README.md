@@ -116,8 +116,9 @@ kubectl get replicaset
 
 ### Exercise
 
-Try increasing replicas or resources. What happens when you ask for more than is
-available?
+1. Delete one pod from deployment. What happens?
+2. Try increasing replicas or resources. What happens when you ask for more than
+   is available?
 
 ## Configuration:
 
