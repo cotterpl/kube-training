@@ -1,0 +1,17 @@
+# copied from: https://downey.io/notes/dev/ubuntu-sleep-pod-yaml/
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubectl-pod-with-sa
+spec:
+  serviceAccountName: inception-creator
+  containers:
+    - image: bitnami/kubectl:1.24
+      command:
+        - "kubectl"
+        - "run"
+        - "pod-inception"
+        - "--image=grzegorzskorupa/myapp:1.0.0"
+      imagePullPolicy: IfNotPresent
+      name: kubectl-pod
+  restartPolicy: Never
