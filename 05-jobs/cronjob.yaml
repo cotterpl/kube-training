@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: send-newsletter
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - image: "grzegorzskorupa/myapp:1.0.0"
+              name: migratedb
+              command:
+                - "python"
+                - "myapp/send_newsletter.py"
+              imagePullPolicy: IfNotPresent
+          restartPolicy: OnFailure

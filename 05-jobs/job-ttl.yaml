@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: migratedb-ttl-
+spec:
+  ttlSecondsAfterFinished: 30
+  template:
+    spec:
+      containers:
+        - image: "grzegorzskorupa/myapp:1.0.0"
+          name: migratedb-ttl
+          command:
+            - "python"
+            - "myapp/migrate_db.py"
+          imagePullPolicy: IfNotPresent
+
+      restartPolicy: Never
