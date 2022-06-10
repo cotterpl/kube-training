@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: migratedb-generate-
+spec:
+  template:
+    spec:
+      containers:
+        - image: "grzegorzskorupa/myapp:1.0.0"
+          name: migratedb
+          command:
+            - "python"
+            - "myapp/migrate_db.py"
+          imagePullPolicy: IfNotPresent
+
+      restartPolicy: Never
