@@ -41,17 +41,50 @@ kubectl create -f 05-jobs/cronjob.yaml
 
 ### Exercise
 
-- What kinds of objects are created by CronJob?
-- Check yaml definition of created CronJob. Do you see any parameters related to
-  past jobs cleaning?
-
-By default CronJob keeps last 3 runs. You can change this behaviours with
-parameters:
-
-- successfulJobsHistoryLimit
-- failedJobsHistoryLimit
+1. What kinds of objects are created by CronJob?
+2. Check yaml definition of created CronJob. Do you see any parameters related
+   to old jobs cleaning?
+3. Change cronjob so that it is run every 30 minutes.
+4. Add database migrations to myapp helm chart. Does helm work with
+   `generateName`?
 
 ## Further reading
 
 - https://kubernetes.io/docs/concepts/workloads/controllers/job/
 - https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+## Appendix
+
+By default CronJob keeps last 3 runs. You can change this behaviour with
+parameters:
+
+- successfulJobsHistoryLimit
+- failedJobsHistoryLimit
+
+You can use version or revision number instead of `generateName` in helm:
+
+```yaml
+name: my-job-{{Release.Revision}}
+```
