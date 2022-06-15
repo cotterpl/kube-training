@@ -5,7 +5,7 @@ network resources based on the roles of individual users.
 
 ## Pod Inception - 1st Attempt
 
-Create a namespace called 'rbac', we will use this namespace for RBAC training:
+Create a namespace called 'rbac', we will use this namespace for RBAC section:
 
 ```shell
 kubectl create ns rbac

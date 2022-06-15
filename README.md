@@ -8,6 +8,8 @@ Training contents:
 - [Service](02-service/README.md)
 - [Helm Charts](03-helm/README.md)
 - [Auto Scaling](04-scaling/README.md)
+- [Jobs](05-jobs/README.md)
+- [RBAC](06-rbac/README.md)
 
 # Assignment
 
