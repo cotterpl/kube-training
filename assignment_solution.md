@@ -57,7 +57,7 @@ Use `kubectl get`, `kubectl describe` to see if service is running.
 
 ## Check your solution
 
-Start **port forwarding** for your service.
+Start **port forwarding** for your service. Then try:
 
 ```shell
 curl 'http://localhost:8080/ready?connections_check=1'

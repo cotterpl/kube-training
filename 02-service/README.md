@@ -2,8 +2,8 @@
 
 ## Introduction
 
-In `02-service/myapp/main.py` there is a simple application with API we would
-like to deploy within our Kubernettes cluster.
+In `myapp/myapp/main.py` there is a simple application with API we would like to
+deploy within our Kubernettes cluster.
 
 This app has been already published as Docker image
 to https://hub.docker.com/r/grzegorzskorupa/myapp.
