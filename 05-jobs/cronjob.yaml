@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
             - image: "grzegorzskorupa/myapp:1.0.0"
-              name: migratedb
+              name: newsletter
               command:
                 - "python"
                 - "myapp/send_newsletter.py"
