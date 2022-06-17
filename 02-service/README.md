@@ -13,14 +13,14 @@ to https://hub.docker.com/r/grzegorzskorupa/myapp.
 In order to provide our application as externally reachable we need at least 2
 components: a Deployment (can also be simple pod) and a Service.
 
-Deployment defines a group of pods as one logical instance.
+Deployment manages a group of pods.
 
 ```shell
 kubectl apply -f 02-service/deployment/01-deployment.yaml
 ```
 
-Service provides entrypoint to a group of pods. As long as service does not
-change its IP address does not change.
+Service provides entrypoint to a group of pods. As long as service exists its IP
+address does not change.
 
 ```shell
 kubectl apply -f 02-service/deployment/service.yaml
