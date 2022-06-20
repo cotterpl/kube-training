@@ -86,5 +86,5 @@ parameters:
 You can use version or revision number instead of `generateName` in helm:
 
 ```yaml
-name: my-job-{{Release.Revision}}
+name: my-job-{{.Release.Revision}}
 ```

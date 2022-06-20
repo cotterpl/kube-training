@@ -1,4 +1,3 @@
-# copied from: https://downey.io/notes/dev/ubuntu-sleep-pod-yaml/
 apiVersion: v1
 kind: Pod
 metadata:
