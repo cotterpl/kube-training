@@ -26,6 +26,11 @@ spec:
                 configMapKeyRef:
                   name: myapp-config
                   key: redis_host
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: myapp-secrets
+                  key: redis_password
           livenessProbe:
             failureThreshold: 2
             timeoutSeconds: 4

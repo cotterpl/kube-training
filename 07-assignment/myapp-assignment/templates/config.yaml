@@ -11,5 +11,4 @@ type: Opaque
 metadata:
   name: myapp-secrets
 data:
-  var_from_secret: ZG9fbm90X3RlbGw=
-  some_other_secret: eW91IGhhY2tlZCBtZQ==
+  redis_password: {{ .Values.redis.auth.password | b64enc }}
