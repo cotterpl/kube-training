@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp-deployment
+spec:
+  selector:
+    matchLabels:
+      app: myapp-pod
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp-pod
+    spec:
+      containers:
+        - name: myapp-pod
+          image: "grzegorzskorupa/myapp:1.0.0"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          livenessProbe:
+            failureThreshold: 2
+            timeoutSeconds: 4
+            periodSeconds: 20
+            httpGet:
+              path: /alive
+              port: 80
+          readinessProbe:
+            timeoutSeconds: 2
+            periodSeconds: 20
+            httpGet:
+              path: /ready
+              port: 80
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 512Mi
+            requests:
+              cpu: 500m
+              memory: 256Mi
