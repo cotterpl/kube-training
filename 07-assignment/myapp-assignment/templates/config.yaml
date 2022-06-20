@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myapp-config
+data:
+  redis_host: "myapp-{{.Release.Namespace}}-redis-master"
+---
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: myapp-secrets
+data:
+  var_from_secret: ZG9fbm90X3RlbGw=
+  some_other_secret: eW91IGhhY2tlZCBtZQ==

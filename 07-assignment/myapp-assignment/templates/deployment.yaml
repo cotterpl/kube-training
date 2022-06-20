@@ -20,6 +20,12 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 80
+          env:
+            - name: REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: myapp-config
+                  key: redis_host
           livenessProbe:
             failureThreshold: 2
             timeoutSeconds: 4
