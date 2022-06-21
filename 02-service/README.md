@@ -28,8 +28,8 @@ kubectl apply -f 02-service/deployment/service.yaml
 
 There are various service types:
 
-- NodePort - good for local development
-- NodeBalancer - when you are using common cloud providers
+- ClusterIP - internal to cluster, good for local development
+- LoadBalancer - when you are using common cloud providers
 - Ingress - dedicated proxy with routing rules between external clients and
   internal Services
 

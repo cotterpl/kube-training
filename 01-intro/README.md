@@ -148,10 +148,15 @@ kubectl delete <object type> <object name>
 
 ### Exercises
 
-1. Figure out how to remove pod.
-2. Download yaml definition of created namespace and pod (hint: `-o yaml`). Do
+1. List namespaces.
+2. List running pods in default / example namespace.
+3. List running pods in all namespaces.
+4. Figure out how to remove pod.
+5. Figure out IP address of ubuntu pod.
+6. Figure out IP address of first worker node.
+7. Download yaml definition of created namespace and pod (hint: `-o yaml`). Do
    you see any fields added by Kubernetes?
-3. Check which pods are running in each node.
-4. Try finding logs for Kubernetes control plane components.
-5. See what is in `~/.kube`. What is `kubectl --context` for? How to switch it?
+8. Check which pods are running in each node.
+9. Try finding logs for Kubernetes control plane components.
+10. See what is in `~/.kube`. What is `kubectl --context` for? How to switch it?
 
