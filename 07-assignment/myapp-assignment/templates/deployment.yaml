@@ -43,7 +43,7 @@ spec:
             timeoutSeconds: 2
             periodSeconds: 20
             httpGet:
-              path: /ready
+              path: /ready?connections_check=1
               port: 80
           resources:
             limits:
