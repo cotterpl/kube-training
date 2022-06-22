@@ -2,8 +2,8 @@
 
 ## Introduction
 
-In `myapp/myapp/main.py` there is a simple application with API we would like to
-deploy within our Kubernettes cluster.
+In `myapp/src/myapp/main.py` there is a simple application with API we would
+like to deploy within our Kubernettes cluster.
 
 This app has been already published as Docker image
 to https://hub.docker.com/r/grzegorzskorupa/myapp.
@@ -38,8 +38,8 @@ More on service types:
 - https://platform9.com/blog/understanding-kubernetes-loadbalancer-vs-nodeport-vs-ingress/
 - https://kubernetes.io/docs/concepts/services-networking/service/
 
-Even though we have a NodePort service it is still not accessible from outside.
-We need to forward the service port outside:
+Even though we have a service it is still not accessible from outside. We need
+to forward the service port outside:
 
 ```shell
 kubectl port-forward svc/myapp-service 8080:80
