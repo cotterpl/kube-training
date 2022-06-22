@@ -71,6 +71,7 @@ curl <POD-IP-DASHED>.<NAMESPACE>.pod
 ```
 
 ```shell
+curl <SERVICE-CLUSTER-IP>
 curl myapp-service
 curl myapp-service.<NAMESPACE>
 curl myapp-service.<MAMESPACE>.svc.cluster.local

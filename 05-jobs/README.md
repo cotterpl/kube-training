@@ -44,8 +44,7 @@ kubectl create -f 05-jobs/cronjob.yaml
 1. What kinds of objects are created by CronJob?
 2. Check yaml definition of created CronJob. Do you see any parameters related
    to old jobs cleaning?
-3. Change cronjob so that it is run once a day.
-4. Add database migrations to myapp helm chart. Does helm work with
+3. Add database migrations to myapp helm chart. Does helm work with
    `generateName`?
 
 ## Further reading

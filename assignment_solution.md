@@ -50,7 +50,7 @@ redis_password: {{.Values.db.redisPassword | b64enc}}
 ```
 
 ```shell
-helm install -n redis-ns myapp-helm ./03-helm/myapp
+helm install -n redis-ns myapp-helm ./myapp/chart
 ```
 
 Use `kubectl get`, `kubectl describe` to see if service is running.

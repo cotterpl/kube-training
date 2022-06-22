@@ -32,7 +32,7 @@ kubectl create namespace hpatest
 
 helm install \
   -n hpatest myapp-helm \
-  ./03-helm/myapp \
+  ./myapp/chart \
   --values ./04-scaling/values-myapp.yaml \
   --dry-run
 ```

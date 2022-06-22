@@ -18,12 +18,14 @@ https://helm.sh/
 kubectl create ns helm-ns
 ```
 
+Helm chart for myapp is in `myapp/chart`
+
 ```shell
-helm install -n helm-ns myapp-helm ./03-helm/myapp --dry-run
+helm install -n helm-ns myapp-helm ./myapp/chart --dry-run
 ```
 
 ```shell
-helm install --atomic -n helm-ns myapp-helm ./03-helm/myapp
+helm install --atomic -n helm-ns myapp-helm ./myapp/chart
 ```
 
 ```shell
@@ -41,4 +43,3 @@ helm uninstall -n helm-ns myapp-helm
 1. Try providing custom value for `varFromPodDefinition` when installing package
    using helm
 2. Make number of pod replicas configurable.
-3. Try installing application twice. Did it work? Can you correct it?
