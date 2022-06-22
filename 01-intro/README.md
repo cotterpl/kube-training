@@ -146,11 +146,17 @@ kubectl edit <object type> <object name>
 kubectl delete <object type> <object name>
 ```
 
+Exception:
+
+```shell
+kubectl logs <pod name>
+```
+
 ### Exercises
 
 1. List namespaces.
 2. List running pods in default / example namespace.
-3. List running pods in all namespaces.
+3. List running pods in all namespaces (hint: `--all-namespaces`).
 4. Figure out how to remove pod.
 5. Figure out IP address of ubuntu pod.
 6. Figure out IP address of first worker node.
