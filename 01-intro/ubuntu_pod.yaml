@@ -11,6 +11,6 @@ spec:
       command:
         - "sleep"
         - "604800"
-      imagePullPolicy: IfNotPresent
+      imagePullPolicy: Always
       name: ubuntu
   restartPolicy: Always

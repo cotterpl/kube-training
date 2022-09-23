@@ -1,4 +1,4 @@
-FROM python:3.8-slim as compile-image
+FROM python:3.9-slim as compile-image
 
 # Create virtualenv and start using it
 RUN python -m venv /opt/venv
@@ -13,7 +13,7 @@ COPY requirements.txt ./
 RUN pip-sync requirements.txt
 
 
-FROM python:3.8-slim AS build-image
+FROM python:3.9-slim AS build-image
 
 # Copy virtualenv from compile image
 COPY --from=compile-image /opt/venv /opt/venv
