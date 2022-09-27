@@ -2,7 +2,12 @@
 
 Contains materials for Kubernetes basics training
 
-Training contents:
+## Prerequisites:
+
+To prepare your environment for training please follow instructions
+at [Environment Setup](environment_setup.md).
+
+## Training contents:
 
 - [Introduction](01-intro/README.md)
 - [Service](02-service/README.md)
@@ -11,7 +16,7 @@ Training contents:
 - [Jobs](05-jobs/README.md)
 - [RBAC](06-rbac/README.md)
 
-# Assignment
+## Assignment
 
 Setup and configure Kubernetes cluster so that `myapp` endpoints:
 
