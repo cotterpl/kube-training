@@ -46,7 +46,7 @@ kubectl -n hpatest get hpa --watch
 ## Generate Load
 
 ```shell
-kubectl run -n hpatest -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.03; do wget -q -O- http://myapp-service/hpatest; done"
+kubectl run -n hpatest -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.15; do wget -q -O- http://myapp-service/hpatest; done"
 ```
 
 .
