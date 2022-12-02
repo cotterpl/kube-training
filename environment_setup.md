@@ -8,7 +8,9 @@
 
 **Note:** Docker requires buying commercial licence for commercial use. If you
 don't have it you can find free alternatives. For example
-https://betterprogramming.pub/how-to-install-docker-without-docker-desktop-on-windows-a2bbb65638a1
+
+- https://betterprogramming.pub/how-to-install-docker-without-docker-desktop-on-windows-a2bbb65638a1
+- https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9
 
 ## Check if your environment is setup properly
 
