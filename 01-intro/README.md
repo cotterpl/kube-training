@@ -1,14 +1,8 @@
 # Introduction #
 
-## Install Prerequisites
-
-- docker https://docs.docker.com/get-docker/
-- kubectl https://kubernetes.io/docs/tasks/tools/
-- kind https://kind.sigs.k8s.io/docs/user/quick-start/#installation
-
 ## Kubernetes Introduction
 
-See: https://www.javatpoint.com/kubernetes
+See: https://kubernetes.io/docs/concepts/architecture/
 
 Why kubernetes:
 
@@ -61,7 +55,7 @@ kubectl describe node <NAME>
 
 Kubectl is a CLI wrapper that talks to Kubernetes API:
 
-Try going to: https://localhost:6443/
+Try going to: https://127.0.0.1:6443/
 
 ## Create your first pod
 

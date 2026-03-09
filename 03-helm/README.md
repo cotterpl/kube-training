@@ -25,7 +25,7 @@ helm install -n helm-ns myapp-helm ./myapp/chart --dry-run
 ```
 
 ```shell
-helm install --atomic -n helm-ns myapp-helm ./myapp/chart
+helm install --rollback-on-failure -n helm-ns myapp-helm ./myapp/chart
 ```
 
 ```shell
